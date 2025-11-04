@@ -1,0 +1,161 @@
+/* 
+Katrina Ortner
+CITC 1300
+Programming Assignment 3
+Style.css — external stylesheet for three simple pages: sets page background, navigation styles, main/div/article/footer rules, and paragraph sizing.
+*/
+
+:root{
+  --page-bg: #f4f7fb;
+  --nav-bg: #0b5d7a;
+  --nav-text: #ffffff;
+  --main-text: #1b2330;
+  --div-text: #2b4a3a;
+  --article-text: #4a2b3a;
+  --heading-bg: #e6f2f8;
+  --accent: #0b8fb0;
+}
+
+/* Page background (applies to entire pages) */
+html, body{
+  height: 100%;
+  margin: 0;
+  background-color: var(--page-bg);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--main-text);
+}
+
+/* Navigation (unordered list) */
+nav{
+  background: var(--nav-bg);
+  padding: 12px;
+  margin-bottom: 18px;
+}
+
+nav ul{
+  list-style-type: square; /* marker type requirement */
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+
+/* navigation items style */
+nav a{
+  color: var(--nav-text);
+  text-decoration: none;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px; /* font size for everything in navigation */
+  padding: 6px 8px;
+  display: inline-block;
+}
+
+/* Main section */
+main{
+  background: #ffffff;
+  padding: 18px; /* padding for entire section */
+  border: 2px solid #d8e6ee; /* border for entire section */
+  margin: 0 16px 24px 16px; /* margin for entire section */
+  font-family: "Georgia", serif;
+  font-size: 16px;
+  color: var(--main-text);
+}
+
+/* Sections inside main */
+main section{
+  margin-bottom: 14px;
+  font-family: "Georgia", serif; /* font for sections inside main */
+}
+
+/* Headings */
+h1, h2, h3{
+  background-color: var(--heading-bg);
+  padding: 6px 8px;
+  margin: 8px 0;
+}
+
+/* div section (must differ from main/article) */
+.page-div{
+  font-family: "Courier New", monospace;
+  color: var(--div-text);
+  font-size: 15px;
+  padding: 10px;
+  border-left: 3px solid var(--accent);
+  background: #fbfcfd;
+}
+
+/* article section (must differ from main/div) */
+article{
+  font-family: "Arial", sans-serif;
+  color: var(--article-text);
+  font-size: 14px;
+  padding: 12px;
+  background: #ffffff;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Footer */
+footer{
+  border: 2px solid #d1dbe2;
+  text-align: center; /* center horizontally */
+  padding: 10px;
+  margin: 18px auto 32px auto;
+  width: calc(100% - 64px);
+  background: #ffffff;
+}
+
+/* Paragraphs */
+p{
+  font-size: 15px; /* paragraph font size */
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+/* Small responsive image utility */
+.centered-img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 220px;
+  height: auto;
+  border-radius: 6px;
+}
+
+/* Accessibility: focus outline for keyboard users */
+a:focus, button:focus {
+  outline: 3px dashed #0b8fb0;
+  outline-offset: 2px;
+}
+
+/* Ensure lists in content look clean */
+ol {
+  padding-left: 1.2rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f9f9f9;
+}
+
+th, td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: left;
+}
+
+caption {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+tr:nth-child(even) {
+  background-color: #e0e0e0;
+}
+
+thead {
+  background-color: #333;
+  color: white;
+}
